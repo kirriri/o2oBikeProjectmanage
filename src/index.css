@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nav-left-block {
+  height: calc(100vh);
+  background-color: #001529;
+}
