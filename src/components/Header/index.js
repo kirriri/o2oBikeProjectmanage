@@ -2,13 +2,22 @@ import React, { Component } from 'react'
 import { Row, Col } from 'antd';
 import Util from '../../utils/utils'
 import './index.less'
+import axios from '../../axios'
 
 class Header extends Component {
-    state = {
-
-    }
+    state = {}
     getWeatherAPIDate() {
-        
+        axios.jsonp({
+            url: 'https://restapi.amap.com/v3/weather/weatherInfo?city=500103&key=a726fc60f7db1bfc0df3b74ab50d1742'
+        }).then((res) => {
+            if(res.status == '1') {
+                this.setState({
+                    city: res.lives[0].city,
+                    weather: res.lives[0].weather
+                })
+                console.log(res.lives)
+            }
+        })
     }
     
     componentWillMount() {
@@ -21,6 +30,7 @@ class Header extends Component {
                 sysTime
             })
         }, 1000)
+        this.getWeatherAPIDate()
     }
     
     render() {
@@ -38,7 +48,7 @@ class Header extends Component {
                     </Col>
                     <Col span="20" className="weather">
                         <span className="date">{this.state.sysTime}</span>
-                        <span className="wheather-detail">晴转多云</span>
+                        <span className="wheather-detail">{this.state.city} {this.state.weather}</span>
                     </Col>
                 </Row>
             </div>
