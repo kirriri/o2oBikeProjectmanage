@@ -1,5 +1,6 @@
 import React , { Component, Fragment } from 'react'
 import { Menu } from 'antd'
+import { NavLink } from "react-router-dom";
 import menuList from '../../config/menuConfig'
 import './index.less'
 
@@ -14,7 +15,7 @@ class NavLeft extends Component {
     }
     //菜单渲染
     renderMenu = (data) => {
-        return data.map((item, index) => {
+        return data.map( item => {
             if(item.children) {
                 return (
                     <SubMenu title={item.title} key={item.key}>
@@ -22,7 +23,11 @@ class NavLeft extends Component {
                     </SubMenu>
                 )
             }
-            return <Menu.Item title={item.title} key={item.key}>{item.title}</Menu.Item>
+            return (
+                <Menu.Item title={item.title} key={item.key}>
+                    <NavLink key={item.title} to={item.key}>{item.title}</NavLink>
+                </Menu.Item>
+            )
         })
     }
 
