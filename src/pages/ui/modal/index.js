@@ -20,7 +20,7 @@ class Modals extends Component {
 
         return (
             <div className="home-wrap">
-                <Card title="基础模态框">
+                <Card title="基础模态框" className="card-wrap">
                     <Button type="primary" onClick={() => this.handleOpenClick('showModal1')}>Open</Button>
                     <Button type="primary" onClick={() => this.handleOpenClick('showModal2')}>自定义页脚</Button>
                     <Button type="primary" onClick={() => this.handleOpenClick('showModal3')}>顶部20px弹窗</Button>

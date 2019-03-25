@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import './index.less'
 
 class NoMatch extends Component {
     render() {
         return (
-            <div style={{textAlign: 'center', fontSize: '24px', color: '#6666'}}>404 not found!</div>
+            <div className="home-wrap no-match">404 not found!</div>
         )
     }
 }
