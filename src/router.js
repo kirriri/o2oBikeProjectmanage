@@ -10,6 +10,7 @@ import Loading from './pages/ui/loading';
 import Notification from './pages/ui/notification'
 import Messages from './pages/ui/messages'
 import Tab from './pages/ui/Table'
+import Gallery from './pages/ui/gallery'
 import Home from './pages/home';
 
 class IRouter extends Component {
@@ -28,6 +29,7 @@ class IRouter extends Component {
                                 <Route path="/admin/ui/notification" component={Notification}/>
                                 <Route path="/admin/ui/messages" component={Messages}/>
                                 <Route path="/admin/ui/tabs" component={Tab}/>
+                                <Route path="/admin/ui/gallery" component={Gallery}/>
                                 <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
