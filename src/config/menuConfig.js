@@ -37,7 +37,7 @@ const menuList = [
             },
             {
                 title: '轮播图',
-                key: '/admin/ui/carousel'
+                key: '/admin/ui/carousels'
             }
         ]
     },
