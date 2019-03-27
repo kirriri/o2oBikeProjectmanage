@@ -12,6 +12,7 @@ import Messages from './pages/ui/messages'
 import Tab from './pages/ui/Table'
 import Gallery from './pages/ui/gallery'
 import Home from './pages/home';
+import FormLogin from './pages/form/login';
 
 class IRouter extends Component {
     render() {
@@ -30,6 +31,7 @@ class IRouter extends Component {
                                 <Route path="/admin/ui/messages" component={Messages}/>
                                 <Route path="/admin/ui/tabs" component={Tab}/>
                                 <Route path="/admin/ui/gallery" component={Gallery}/>
+                                <Route path="/admin/form/login" component={FormLogin}/>
                                 <Route component={NoMatch}/>
                             </Switch>
                         </Admin>
